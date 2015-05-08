@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        id="com.eiq.JasperReports"
+        version="0.0.1">
+    <name>JasperReports</name>
+    <description>Jasper Report implementation</description>
+    <license>Apache 2.0</license>
+    <keywords>cordova,jasper,report</keywords>
+    <js-module src="www/jasper.js" name="jasper">
+        <clobbers target="JasperReports" />
+    </js-module>
+    <platform name="android">
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="JasperReports" >
+                <param name="android-package" value="JasperReports"/>
+            </feature>
+        </config-file>
+        <source-file src="src/jasper/XML2PDF.java" target-dir="src/" />
+    </platform>
+</plugin>
