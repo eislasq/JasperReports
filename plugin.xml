@@ -7,15 +7,21 @@
     <description>Jasper Report implementation</description>
     <license>Apache 2.0</license>
     <keywords>cordova,jasper,report</keywords>
-    <js-module src="www/jasper.js" name="jasper">
+    <repo></repo>
+    <issue></issue>
+    <js-module src="www/jasper.js" name="JasperReports">
         <clobbers target="JasperReports" />
     </js-module>
+    <!-- android -->
     <platform name="android">
         <config-file target="res/xml/config.xml" parent="/*">
             <feature name="JasperReports" >
-                <param name="android-package" value="JasperReports"/>
+                <param name="android-package" value="com.eiq.JasperReports"/>
             </feature>
         </config-file>
-        <source-file src="src/jasper/XML2PDF.java" target-dir="src/" />
+        <source-file src="src/android/JasperReports.java" target-dir="src/com/eiq/" />
+        <source-file src="src/android/Xml2Pdf.java" target-dir="src/com/eiq/" />
+        <source-file src="src/android/lib/jasperreports-4.0.0.jar" target-dir="libs" />
+        <source-file src="src/android/lib/commons-collections4-4.0.jar" target-dir="libs" />
     </platform>
 </plugin>

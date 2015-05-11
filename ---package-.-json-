@@ -1,0 +1,19 @@
+{
+    "version": "0.1",
+    "name": "com.eiq.JasperReports",
+    "cordova_name": "JasperReports",
+    "description": "Jasper Report implementation",
+    "license": "Apache 2.0",
+    "repo": "",
+    "issue": "",
+    "keywords": [
+        "cordova",
+        "jasper",
+        "report"
+    ],
+    "platforms": [
+        "android"
+    ],
+    "engines": [],
+    "englishdoc": ""
+}
